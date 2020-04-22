@@ -1,0 +1,21 @@
+---
+# tasks file for set_authorized_keys
+- name: ~/.ssh for users exsit
+  file:
+    path: "/home/{{ username }}/.ssh"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0700
+
+- name: authorized keys is deployed
+  authorized_key:
+    user: "{{ username }}"
+    state: present
+    key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+#  copy:
+#    src: "/home/{{ username }}/.ssh/authorized_keys"
+#    dest: "/home/{{ username }}/.ssh/authorized_keys"
+#    owner: {{ username }}
+#    group: {{ username }}
+#    mode: 0600

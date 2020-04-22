@@ -1,0 +1,5 @@
+---
+# tasks file for user_add
+- name: add user
+  user:
+    name: ansible

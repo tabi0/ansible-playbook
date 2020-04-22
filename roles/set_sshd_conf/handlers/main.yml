@@ -1,0 +1,6 @@
+---
+# handlers file for set_sshd_conf
+- name: sshd restart
+  service:
+     name: sshd
+     state: restarted

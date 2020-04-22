@@ -1,0 +1,4 @@
+- hosts: remote1
+  remote_user: root
+  roles: 
+    - set_timezone

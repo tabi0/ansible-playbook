@@ -1,0 +1,4 @@
+- hosts: remote1
+  remote_user: root
+  roles: 
+    - user_add

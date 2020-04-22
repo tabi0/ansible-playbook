@@ -1,0 +1,6 @@
+---
+# tasks file for set_timezone
+- name: set timezone to Asia/Tokyo
+  timezone:
+    name: Asia/Tokyo
+
