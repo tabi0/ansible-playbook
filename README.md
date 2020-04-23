@@ -1,5 +1,5 @@
 # ansible-playbook
-
+```
   tree  --charset=o  -L  2
 .
 |-- README.md
@@ -31,3 +31,4 @@
 |-- setup_init_server.yml
 |-- user_add.yml
 `-- yum_update.yml
+```
