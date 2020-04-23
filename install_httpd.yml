@@ -1,4 +1,4 @@
 - hosts: remote
   become: yes
   roles: 
-    - set_hostname
+    - install_httpd

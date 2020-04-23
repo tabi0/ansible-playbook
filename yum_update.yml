@@ -1,4 +1,4 @@
-- hosts: ansible
+- hosts: remote
   become: yes
   roles: 
     - yum_update

@@ -1,0 +1,6 @@
+---
+# tasks file for install_php
+- name: yum instal php
+  yum:
+    name: php
+    state: latest

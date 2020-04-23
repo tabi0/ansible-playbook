@@ -1,0 +1,4 @@
+- hosts: ansible
+  become: yes
+  roles: 
+    - install_java

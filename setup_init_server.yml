@@ -1,0 +1,14 @@
+# remote_user: root 
+- include: user_add.yml
+- include: set_authorized_keys.yml
+- include: set_sudoers.yml
+
+# ansible user
+- include: set_hostname.yml
+- include: set_timezone.yml
+
+- include: selinux_disable.yml
+
+- include: set_sshd_conf.yml
+- include: yum_update.yml
+

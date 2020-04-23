@@ -1,0 +1,6 @@
+---
+# tasks file for install_java
+- name: yum instal java
+  yum:
+    name: java
+    state: latest

@@ -1,4 +1,4 @@
-- hosts: remote1
-  remote_user: root
+- hosts: remote
+  become: yes
   roles: 
     - selinux_disable
