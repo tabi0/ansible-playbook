@@ -1,0 +1,13 @@
+---
+# tasks file for get_ipafont
+
+- name: unzip
+  unarchive:
+    src: https://ipafont.ipa.go.jp/IPAfont/IPAfont00303.zip
+    dest: /usr/share/fonts/
+    remote_src: yes
+- name: fc-cache -fv
+  shell:
+    cmd: "fc-cache -fv"
+
+

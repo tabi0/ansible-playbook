@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+  - name: test
+    debug:
+      msg: "local"
+    when: ansible_fqdn == "localhost"
+  - name: test2
+    debug:
+      msg: "not local"
+    when: ansible_fqdn != "localhost"

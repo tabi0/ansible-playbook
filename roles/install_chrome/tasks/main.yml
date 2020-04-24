@@ -1,0 +1,11 @@
+---
+# tasks file for install_chrome
+- name: "send chrome repo"
+  copy:
+    src: google.chrome.repo
+    dest: /etc/yum.repo.d/
+- name: "Chrome installed"
+  yum:
+    name: google-chrome-stable
+    state: latest
+

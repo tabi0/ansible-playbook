@@ -1,0 +1,6 @@
+---
+# tasks file for install_selenium
+- name: "selenium installed"
+  pip:
+    name: selenium
+    state: latest

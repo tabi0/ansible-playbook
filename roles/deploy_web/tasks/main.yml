@@ -1,0 +1,7 @@
+---
+# tasks file for deploy_web
+# www/ の中身をコピー(wwwディレクトリはコピーしない)
+- name: deploy web
+  synchronize:
+    src="/home/ansible/ansible-test/www/"
+    dest="/var/www/html/"
