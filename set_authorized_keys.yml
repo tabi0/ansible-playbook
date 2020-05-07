@@ -1,4 +1,5 @@
 - hosts: remote
-  remote_user: root
+  #remote_user: root
+  become_user: root
   roles: 
     - set_authorized_keys

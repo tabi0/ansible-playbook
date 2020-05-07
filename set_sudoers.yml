@@ -1,4 +1,5 @@
 - hosts: remote
-  remote_user: root
+  #remote_user: root
+  remote_user: ec2-user
   roles: 
     - set_sudoers

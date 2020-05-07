@@ -3,6 +3,14 @@
 - name: selinux disabled
   selinux:
     state: disabled
+  ignore_errors: yes
+  when: ansible_distribution != "Amazon"
+- name: replace selinux
+  lineinfile:
+    path: /etc/selinux/config
+    state: present
+    regexp: "^SELINUX=enforcing"
+    line: "SELINUX=disabled"
 - name: getenforce
   shell: getenforce
   register: selinux_result

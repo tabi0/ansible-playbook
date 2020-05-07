@@ -8,3 +8,15 @@
   yum:
     name: epel-release
     state: latest
+  when: ansible_distribution != "Amazon"
+- name: epel repo install
+  shell: "amazon-linux-extras install -y epel"
+  when: ansible_distribution == "Amazon"
+- name: python-pip install
+  yum:
+    name: python-pip
+    state: latest
+  when: ansible_distribution == "Amazon"
+- name: libselinux-python
+  shell: "pip install selinux"
+  when: ansible_distribution == "Amazon"
